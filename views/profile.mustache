@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ header }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  </head>
+  <body>
+    {{>nav}}
+
+    <div class="container" style="padding-top:24px">
+
+      <div class="row">
+        <div class="col-md-3">
+          <h1>Profile</h1>
+          <h3>Welcome {{ profile.username }}</h3>
+          <a href="/account/logout">Logout</a>
+          <br /><br />
+          <form action="/account/comment" method="post">
+            <textarea name="text" placeholder="Comment"></textarea>
+            <br />
+            <input type="submit" value="Submit Comment" />
+          </form>
+        </div>
+
+        <div class="col-md-9">
+          <h3>Your Comments</h3>
+          {{#comments}}
+            <div style="font-weight:100;background:#f9f9f9;padding:12px;margin-bottom:12px;border:1px solid #ddd">{{text}}
+            </div>
+
+          {{/comments}}
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </body>
+</html>

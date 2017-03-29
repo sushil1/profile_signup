@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ header }}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  </head>
+  <body>
+    {{>nav}}
+
+    <div class='container'>
+      <h1>Sign Up</h1>
+      <form action="/account/register" method="post">
+      	<input type="text" name="email" placeholder="Email" /><br />
+      	<input type="text" name="username" placeholder="Username" /><br />
+      	<input type="text" name="password" placeholder="Password" /><br />
+      	<input type="submit" value="Submit" />
+      </form>
+
+      <h1>Login</h1>
+      <form action="/account/login" method="post">
+        <input type="text" name="email" placeholder="Email" /><br />
+        <input type="text" name="password" placeholder="Password" /><br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+
+  </body>
+</html>
