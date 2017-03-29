@@ -8,3 +8,8 @@ open browser at localhost:3000
 sign up and you will be redirected to your profile page where you can save some comments
 
 API routes api/profile, api/comment
+
+To run
+npm install 
+Create a .env file in the project directory
+and create and give value to DB_URL, TOKEN_SECRET and SESSION_SECRET
